@@ -4,11 +4,11 @@ import {
   DocumentBuilder,
   SwaggerDocumentOptions,
 } from '@nestjs/swagger';
-import { AppModule } from './app.module';
-// import { TodoModule } from './todo/todo.module';
+// import { AppModule } from './app.module';
+import { TodoModule } from './todo/todo.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(TodoModule);
 
   const config = new DocumentBuilder()
     .setTitle('Cats example')
